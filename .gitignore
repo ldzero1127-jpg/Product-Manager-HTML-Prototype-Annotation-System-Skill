@@ -1,0 +1,8 @@
+# Test files
+*.html
+*.html.bak
+!assets/templates/*.html
+
+# Temp files
+annotations-data.js
+node_modules/

@@ -1,0 +1,49 @@
+<!-- ================================================================
+     Prototype Annotator — Card HTML Fragment
+     ================================================================ -->
+<div class="anno-card" id="annoCard" data-editing-anno-idx="-1">
+  <div class="anno-card-header">
+    <div class="anno-card-title-row">
+      <div class="anno-card-num blue" id="annoCardNum">1</div>
+      <div class="anno-card-title" id="annoCardTitle">标注标题</div>
+    </div>
+    <button class="anno-card-close">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+  </div>
+
+  <!-- View Mode -->
+  <div class="anno-card-body" id="annoCardViewMode">
+    <div class="anno-card-summary" id="annoCardSummary">标注摘要内容</div>
+    <div class="anno-card-detail" id="annoCardDetail"></div>
+    <div class="anno-card-meta">
+      <span class="anno-card-time" id="annoCardTime">更新于 05-29</span>
+      <button class="anno-card-edit-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"/>
+        </svg>
+        编辑
+      </button>
+    </div>
+  </div>
+
+  <!-- Edit Mode -->
+  <div class="anno-card-body" id="annoCardEditMode" style="display:none;">
+    <div class="anno-form-group">
+      <label class="anno-form-label">标注摘要</label>
+      <input type="text" class="anno-form-input" id="annoEditTitle" placeholder="输入标注摘要（1-2句话）">
+    </div>
+    <div class="anno-form-group">
+      <label class="anno-form-label">详细说明（每行一条）</label>
+      <textarea class="anno-form-textarea" id="annoEditContent" placeholder="每行一条业务规则或说明"></textarea>
+    </div>
+    <div class="anno-form-actions">
+      <button class="anno-btn-cancel" id="annoCardCancelBtn">取消</button>
+      <button class="anno-btn-save" id="annoCardDeleteBtn" style="background:var(--anno-danger)">删除</button>
+      <button class="anno-btn-save" id="annoCardSaveBtn">保存</button>
+    </div>
+  </div>
+</div>
